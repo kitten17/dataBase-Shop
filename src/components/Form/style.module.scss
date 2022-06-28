@@ -1,0 +1,93 @@
+@import '../../import.style.scss';
+
+form {
+    padding: $main-adaptive-padding $main-padding;
+
+    background-color: #fff;
+
+    .form-header {
+        margin-bottom: 3.5%;
+
+        h1 {
+            margin: 0;
+
+            font-weight: 600;
+        }
+
+        h3 {
+            font-weight: 500;
+
+            margin-top: 10px;
+        }
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+
+        input,
+        button {
+            font-size: 18px;
+
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 5px 20px;
+            width: 30%;
+
+            font-weight: 400;
+            background-color: #FCFCFC;
+            border: 1px solid #CECECE;
+        }
+
+        button {
+            color: white;
+            font-weight: 600;
+            background-color: #62B25A;
+            border: 0;
+
+            width: 20%;
+            padding: 20px;
+
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    form{
+        .form-header{
+            *{
+                text-align: center;
+            }
+
+            h1{
+                font-size: 25px;
+            }
+
+            h3{
+                font-size: 18px;
+            }
+        }
+
+        .form-container{
+            justify-content: initial;
+            flex-direction: column;
+            align-items: center;
+
+            input, button{
+                margin: 5px 0;
+            }
+
+            input{
+                width: 100%;
+                padding: 20px;
+            }
+
+            button{
+                width: 50%;
+            }
+        }
+    }
+}

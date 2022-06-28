@@ -1,0 +1,203 @@
+@import '../../import.style.scss';
+
+nav {
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+
+    width: 100%;
+    max-width: 1920px;
+    height: 100px;
+    padding: 7.5px $main-padding;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    transition: 250ms all;
+
+    .nav {
+        &__column {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+
+                margin: 0 7.5px;
+
+                position: relative;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &::after {
+                    content: '';
+
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    width: 0;
+                    height: 2px;
+
+                    background-color: black;
+                    border-radius: 20px;
+
+                    transition: 250ms all;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            height: 100%;
+        }
+
+        &-burger {
+            display: none;
+
+            position: absolute;
+            right: $main-padding;
+            top: 37.5px;
+
+            width: 35px;
+            height: 25px;
+            padding: 0;
+
+            background-color: transparent;
+            border: none;
+
+            div {
+                height: 3px;
+                width: 100%;
+                background-color: black;
+
+                position: absolute;
+
+                &:first-child {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:last-child {
+                    bottom: 0;
+                }
+            }
+
+            * {
+                transition: 250ms all;
+            }
+        }
+    }
+}
+
+.nav_active {
+    max-height: 175px;
+
+    transition: 250ms all;
+
+    .nav-burger {
+        div {
+            &:first-child {
+                transform: rotate(-45deg);
+
+                top: 50%;
+            }
+
+            &:nth-child(2) {
+                width: 0;
+                
+                right: 0;
+            }
+
+            &:last-child {
+                bottom: 37.5%;
+
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        max-height: 90px;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .nav__column a {
+            font-size: 17.5px;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    nav {
+        height: auto;
+
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+
+        overflow-y: hidden;
+
+        .nav {
+            &-burger {
+                display: block;
+            }
+
+            &-logo {
+                width: 130px;
+            }
+
+            &__column {
+                flex-direction: column;
+                align-items: flex-start;
+
+                a {
+                    margin: 5px 0;
+                }
+
+                &:first-child {
+                    width: 50%;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 25px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    nav{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
