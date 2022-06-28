@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dataBase-Shop/static/css/main.fa87efd2.css",
+    "main.js": "/dataBase-Shop/static/js/main.2617f1dc.js",
+    "static/media/logo.jpg": "/dataBase-Shop/static/media/logo.d91c76e765698797c49c.jpg",
+    "index.html": "/dataBase-Shop/index.html",
+    "static/media/popup-close.svg": "/dataBase-Shop/static/media/popup-close.b15b7efeaafaf7c4abab.svg",
+    "static/media/return.svg": "/dataBase-Shop/static/media/return.913fff9fe898e1cebd54.svg",
+    "main.fa87efd2.css.map": "/dataBase-Shop/static/css/main.fa87efd2.css.map",
+    "main.2617f1dc.js.map": "/dataBase-Shop/static/js/main.2617f1dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa87efd2.css",
+    "static/js/main.2617f1dc.js"
+  ]
+}
