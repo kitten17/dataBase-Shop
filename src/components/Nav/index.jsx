@@ -1,15 +1,18 @@
-import { NavLink } from 'react-router-dom'
+import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import module from './style.module.scss'
-
 import Logo from '../../images/logo.jpg'
-import { useRef } from 'react'
 
 function Nav() {
     const burgerRef = useRef("")
 
-    const burgerOpen = () => {
+    const burgerOpen = (top) => {
         burgerRef.current.classList.toggle(module["nav_active"])
+
+        if (top) {
+            window.scrollTo(0, 0)
+        }
     }
 
     return (
@@ -18,15 +21,15 @@ function Nav() {
                 <img src={Logo} alt="Здесь лого" className={module["nav-logo"]} />
             </div>
 
-            <button className={module["nav-burger"]} onClick={burgerOpen}>
+            <button className={module["nav-burger"]} onClick={() => burgerOpen(false)}>
                 <div></div>
                 <div></div>
                 <div></div>
             </button>
 
             <div className={module.nav__column}>
-                <NavLink to="/" onClick={burgerOpen}>Урны</NavLink>
-                <NavLink to="/" onClick={burgerOpen}>Кондиционеры</NavLink>
+                <Link to="/" onClick={() => burgerOpen(true)}>Урны</Link>
+                <Link to="/" onClick={() => burgerOpen(true)}>Кондиционеры</Link>
             </div>
         </nav>
     );

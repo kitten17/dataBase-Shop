@@ -19,8 +19,6 @@ function List() {
 
     }, [])
 
-    console.log(items)
-
     return (
         <div className={module.list}>
             <h1 className={module["list-title"]}>
@@ -29,7 +27,7 @@ function List() {
 
             <div className={module["list-container"]}>
                 {items.map(i => (
-                    <Link to ={i.id} key={i.id} className={module.list__block}>
+                    <Link to ={i.id} key={i.id} className={module.list__block} onClick = {()=>window.scrollTo(0, 0)}>
                         <img src={i.image} alt={i.title} />
 
                         <h1 className={module.list__title}>

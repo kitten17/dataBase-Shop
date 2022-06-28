@@ -54,7 +54,7 @@ function Item() {
             {loaded && (
                 <div className={module.item}>
                     <div className={module.item__column}>
-                        <Link to="/" className={module["home-button"]}>
+                        <Link to="/" className={module["home-button"]} onClick = {()=>window.scrollTo(0, 0)}>
                             <div></div>
                             Вернуться
                         </Link>
@@ -66,7 +66,7 @@ function Item() {
                             className={module["swiper-slider_screen"]}
                         >
                             {images && images.map((i) => (
-                                <SwiperSlide className={module.swiper__slide} key={i.id}>
+                                <SwiperSlide className={module.swiper__slide} key={i}>
                                     <img src={i} alt={i} />
                                 </SwiperSlide>
                             ))}
@@ -85,7 +85,7 @@ function Item() {
                             style={{ color: "red" }}
                         >
                             {images && images.map((i) => (
-                                <SwiperSlide className={module.swiper__slide} key={i.id}>
+                                <SwiperSlide className={module.swiper__slide} key={i}>
                                     <img src={i} alt={i} />
                                 </SwiperSlide>
                             ))}
@@ -105,17 +105,17 @@ function Item() {
                             <div className={module["item-options"]}>
                                 <div className={module["item__option"]}>
                                     <h3>Возможные размеры</h3>
-                                    <input type="text" value={items[0].size} />
+                                    <input readOnly type="text" value={items[0].size} />
                                 </div>
 
                                 <div className={module["item__option"]}>
                                     <h3>Узор</h3>
-                                    <input type="text" value={items[0].pattern} />
+                                    <input readOnly type="text" value={items[0].pattern} />
                                 </div>
 
                                 <div className={module["item__option"]}>
                                     <h3>Цвет</h3>
-                                    <input type="text" value={items[0].color} />
+                                    <input readOnly type="text" value={items[0].color} />
                                 </div>
                             </div>
                         </div>
