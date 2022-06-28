@@ -25,8 +25,8 @@ function Nav() {
             </button>
 
             <div className={module.nav__column}>
-                <NavLink to="/">Урны</NavLink>
-                <NavLink to="/">Кондиционеры</NavLink>
+                <NavLink to="/" onClick={burgerOpen}>Урны</NavLink>
+                <NavLink to="/" onClick={burgerOpen}>Кондиционеры</NavLink>
             </div>
         </nav>
     );
