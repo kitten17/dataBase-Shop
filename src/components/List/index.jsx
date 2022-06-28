@@ -16,7 +16,6 @@ function List() {
                 ])
             })
         })
-
     }, [])
 
     return (
