@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dataBase-Shop/static/css/main.70c6eeb5.css",
-    "main.js": "/dataBase-Shop/static/js/main.fc60692a.js",
+    "main.css": "/dataBase-Shop/static/css/main.f5026fe1.css",
+    "main.js": "/dataBase-Shop/static/js/main.4754c112.js",
     "static/media/logo.jpg": "/dataBase-Shop/static/media/logo.d91c76e765698797c49c.jpg",
     "index.html": "/dataBase-Shop/index.html",
-    "static/media/popup-close.svg": "/dataBase-Shop/static/media/popup-close.b15b7efeaafaf7c4abab.svg",
+    "static/media/popup-close.svg": "/dataBase-Shop/static/media/popup-close.3076fe80df1638aeda15.svg",
     "static/media/return.svg": "/dataBase-Shop/static/media/return.913fff9fe898e1cebd54.svg",
-    "main.70c6eeb5.css.map": "/dataBase-Shop/static/css/main.70c6eeb5.css.map",
-    "main.fc60692a.js.map": "/dataBase-Shop/static/js/main.fc60692a.js.map"
+    "main.f5026fe1.css.map": "/dataBase-Shop/static/css/main.f5026fe1.css.map",
+    "main.4754c112.js.map": "/dataBase-Shop/static/js/main.4754c112.js.map"
   },
   "entrypoints": [
-    "static/css/main.70c6eeb5.css",
-    "static/js/main.fc60692a.js"
+    "static/css/main.f5026fe1.css",
+    "static/js/main.4754c112.js"
   ]
 }
