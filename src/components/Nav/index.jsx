@@ -28,8 +28,8 @@ function Nav() {
             </button>
 
             <div className={module.nav__column}>
-                <Link to="/" onClick={() => burgerOpen(true)}>Урны</Link>
-                <Link to="/" onClick={() => burgerOpen(true)}>Кондиционеры</Link>
+                <Link to="/bins" onClick={() => burgerOpen(true)}>Урны</Link>
+                <Link to="/conditioners" onClick={() => burgerOpen(true)}>Кондиционеры</Link>
             </div>
         </nav>
     );

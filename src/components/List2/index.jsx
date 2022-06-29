@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import docs from '../../server/firebase'
+import docs from '../../server/bins'
 import { Link } from 'react-router-dom'
 
 import module from './style.module.scss'
@@ -26,7 +26,7 @@ function List() {
 
             <div className={module["list-container"]}>
                 {items.map(i => (
-                    <Link to ={`/conditioners/${i.id}`} key={i.id} className={module.list__block} onClick = {()=>window.scrollTo(0, 0)}>
+                    <Link to ={i.id} key={i.id} className={module.list__block} onClick = {()=>window.scrollTo(0, 0)}>
                         <img src={i.image} alt={i.title} />
 
                         <h1 className={module.list__title}>

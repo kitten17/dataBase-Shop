@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 
-import docs from '../../server/firebase'
+import bins from '../../server/bins'
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,7 +26,7 @@ function Item() {
     }
 
     useEffect(() => {
-        docs.then(response => {
+        bins.then(response => {
             response.docs.forEach(i => {
                 if (i.id === idParam) {
                     setItems(p => [
@@ -36,7 +36,7 @@ function Item() {
 
                     setitemImages(p => [
                         ...p,
-                        i.data().images2
+                        i.data().images
                     ])
 
                     setLoaded(true)
@@ -54,42 +54,46 @@ function Item() {
             {loaded && (
                 <div className={module.item}>
                     <div className={module.item__column}>
-                        <Link to="/conditioners" className={module["home-button"]} onClick = {()=>window.scrollTo(0, 0)}>
+                        <Link to="/bins" className={module["home-button"]} onClick={() => window.scrollTo(0, 0)}>
                             <div></div>
                             Вернуться
                         </Link>
 
-                        <Swiper
-                            spaceBetween={10}
-                            thumbs={{ swiper: thumbsSwiper }}
-                            modules={[FreeMode, Navigation, Thumbs]}
-                            className={module["swiper-slider_screen"]}
-                        >
-                            {images && images.map((i) => (
-                                <SwiperSlide className={module.swiper__slide} key={i}>
-                                    <img src={i} alt={i} />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                        {itemImages && (
+                            <>
+                                <Swiper
+                                    spaceBetween={10}
+                                    thumbs={{ swiper: thumbsSwiper }}
+                                    modules={[FreeMode, Navigation, Thumbs]}
+                                    className={module["swiper-slider_screen"]}
+                                >
+                                    {images && images.map((i) => (
+                                        <SwiperSlide className={module.swiper__slide} key={i}>
+                                            <img src={i} alt={i} />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
 
-                        <Swiper
-                            onSwiper={setThumbsSwiper}
-                            spaceBetween={10}
-                            breakpoints={breakpoints}
-                            slidesPerView={2}
-                            freeMode={true}
-                            watchSlidesProgress={true}
-                            navigation={true}
-                            modules={[FreeMode, Navigation, Thumbs]}
-                            className={module["swiper-slider_variants"]}
-                            style={{ color: "red" }}
-                        >
-                            {images && images.map((i) => (
-                                <SwiperSlide className={module.swiper__slide} key={i}>
-                                    <img src={i} alt={i} />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                                <Swiper
+                                    onSwiper={setThumbsSwiper}
+                                    spaceBetween={10}
+                                    breakpoints={breakpoints}
+                                    slidesPerView={2}
+                                    freeMode={true}
+                                    watchSlidesProgress={true}
+                                    navigation={true}
+                                    modules={[FreeMode, Navigation, Thumbs]}
+                                    className={module["swiper-slider_variants"]}
+                                    style={{ color: "red" }}
+                                >
+                                    {images && images.map((i) => (
+                                        <SwiperSlide className={module.swiper__slide} key={i}>
+                                            <img src={i} alt={i} />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </>
+                        )}
                     </div>
 
                     <div className={module.item__column}>
