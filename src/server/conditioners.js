@@ -19,7 +19,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const db = getFirestore()
 
-const colRef = collection(db, "items")
+const colRef = collection(db, "conditioners")
 
 const docs = getDocs(colRef)
 

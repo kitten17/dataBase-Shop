@@ -41,6 +41,12 @@ nav {
                     margin-right: 0;
                 }
 
+                &.active-link{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+
                 &::after {
                     content: '';
 
@@ -129,7 +135,7 @@ nav {
 
             &:nth-child(2) {
                 width: 0;
-                
+
                 right: 0;
             }
 
@@ -196,7 +202,7 @@ nav {
 }
 
 @media (min-width: 1920px) {
-    nav{
+    nav {
         left: 50%;
         transform: translateX(-50%);
     }

@@ -11,7 +11,7 @@ function Footer() {
                 <img src={Logo} alt="logo" className={module.logo} />
             </div>
             <div className={module.footer__column}>
-                <h3>Разделы</h3>
+                <h3>Урны, корзины для кондиционеров</h3>
 
                 <div>
                     <a href="">Урны</a>
@@ -20,20 +20,9 @@ function Footer() {
             </div>
 
             <div className={module.footer__column}>
-                <h3>Связь</h3>
-
                 <div>
-                    <a href="">+7 986 992 0503</a>
-                    <a href="">email@mail.ru</a>
-                </div>
-            </div>
-
-            <div className={module.footer__column}>
-                <h3>Связь</h3>
-
-                <div>
-                    <Link to="/">+7 986 992 0503</Link>
-                    <Link to="/">email@mail.ru</Link>
+                    <a href="tel:+79869920503">+7 986 992 0503</a>
+                    <a>email@mail.ru</a>
                 </div>
             </div>
         </footer>

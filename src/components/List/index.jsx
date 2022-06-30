@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import docs from '../../server/firebase'
+import docs from '../../server/conditioners'
 import { Link } from 'react-router-dom'
 
 import module from './style.module.scss'

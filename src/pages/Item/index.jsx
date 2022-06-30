@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 
-import docs from '../../server/firebase'
+import docs from '../../server/conditioners'
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -36,7 +36,7 @@ function Item() {
 
                     setitemImages(p => [
                         ...p,
-                        i.data().images2
+                        i.data().images
                     ])
 
                     setLoaded(true)

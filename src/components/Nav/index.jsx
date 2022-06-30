@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import module from './style.module.scss'
 import Logo from '../../images/logo.jpg'
@@ -28,8 +28,8 @@ function Nav() {
             </button>
 
             <div className={module.nav__column}>
-                <Link to="/bins" onClick={() => burgerOpen(true)}>Урны</Link>
-                <Link to="/conditioners" onClick={() => burgerOpen(true)}>Кондиционеры</Link>
+                <NavLink to="/bins" className={({isActive}) => isActive ? module["active-link"] : ""} onClick={() => burgerOpen(true)}>Урны</NavLink>
+                <NavLink to="/conditioners" className={({isActive}) => isActive ? module["active-link"] : ""} onClick={() => burgerOpen(true)}>Кондиционеры</NavLink>
             </div>
         </nav>
     );

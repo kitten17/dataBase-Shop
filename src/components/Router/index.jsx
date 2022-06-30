@@ -6,6 +6,8 @@ import Item from '../../pages/Item/'
 import Main2 from '../../pages/Main2/'
 import Item2 from '../../pages/Item2/'
 
+import Error from '../Error'
+
 function RoutesComp() {
     return (
         <Routes>
@@ -14,6 +16,8 @@ function RoutesComp() {
 
             <Route path="/bins" element={<Main2 />}></Route>
             <Route path="/bins/:idParam" element={<Item2 />}></Route>
+
+            <Route path="*" element={<Error/>}></Route>
         </Routes>
     );
 }
